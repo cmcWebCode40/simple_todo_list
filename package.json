@@ -1,0 +1,20 @@
+{
+  "name": "todoapp",
+  "version": "1.0.0",
+  "description": "Basic Project",
+  "main": "index.js",
+  "scripts": {
+    "start": " "
+  },
+  "repository": {
+    "type": "git",
+    "url": "none"
+  },
+  "keywords": [
+    "Basic",
+    "Exercise"
+  ],
+  "author": "cmcWebCode",
+  "license": "MIT"
+ 
+}
