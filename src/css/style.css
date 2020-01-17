@@ -1,38 +1,44 @@
+:root {
+  --primary-color: #ffad32;
+  --bg-color: #004156;
+  --text-color: #fff;
+}
+
 body {
-    background: #011314;
-    color: #fff;
-    font-size: 1.1rem;
+  background: #011314;
+  color: #fff;
+  font-size: 1.1rem;
 }
 
 .flex {
-    display: flex;    
+  display: flex;
 }
 
 .show {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .set {
-    margin: 0.8em 14em;
-    width: 60%
+  margin: 0.8em 14em;
+  width: 60%;
 }
 
 .block > p {
-margin:.6em 0 0 .8em;
-word-break: break-all;
-flex-basis: 20.333%;
-background: rgb(66, 84, 88);
-text-align: center;
-padding: .3em
+  margin: 0.6em 0 0 0.8em;
+  word-break: break-all;
+  flex-basis: 20.333%;
+  background: rgb(66, 84, 88);
+  text-align: center;
+  padding: 0.3em;
 }
-@media (max-width:768px) {
-    .show  p {
-        font-size: .6em;
-    }
+@media (max-width: 768px) {
+  .show p {
+    font-size: 0.6em;
+  }
 
-    .set {
-        margin: auto;
-        width: 60%;
-        padding: .2em
-    }
+  .set {
+    margin: auto;
+    width: 60%;
+    padding: 0.2em;
+  }
 }
