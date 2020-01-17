@@ -1,15 +1,26 @@
 :root {
   --primary-color: #ffad32;
-  --bg-color: #004156;
+  --bg-color: #050a18ee;
   --text-color: #fff;
 }
 
 body {
-  background: #011314;
+  background: var(--bg-color);
   color: #fff;
   font-size: 1.1rem;
 }
 
+span {
+  color: var(--primary-color);
+}
+
+i {
+  color: var(--primary-color);
+}
+
+input[type="submit"] {
+  background-color: var(--bg-color);
+}
 .flex {
   display: flex;
 }
