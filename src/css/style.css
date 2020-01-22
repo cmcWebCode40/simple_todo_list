@@ -1,55 +1,127 @@
 :root {
   --primary-color: #ffad32;
-  --bg-color: #050a18ee;
+  --bg-color: #041030ee;
   --text-color: #fff;
+  --text-light: #ddd;
+  --table-hover: #ddd;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   background: var(--bg-color);
   color: #fff;
   font-size: 1.1rem;
+  font-family: "Livvic" sans-serif;
+  overflow-y: scroll;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+}
+
+.wrapper {
+  width: 100%;
+}
+
+h1 {
+  margin: 2rem 0;
+  font-size: 2.6rem;
+  text-align: center;
+}
+
+h3 {
+  margin: 2rem 0;
 }
 
 span {
   color: var(--primary-color);
 }
 
-i {
-  color: var(--primary-color);
+label {
+  font-size: 1.4rem;
+}
+
+input[type="text"],
+input[type="submit"],
+input[type="date"],
+input[type="time"] {
+  width: 100%;
+  padding: 9px 45px;
+  margin: 0.8rem 0;
+  border: none;
+  border-radius: 6px;
+}
+
+input:focus {
+  outline: none;
+  border: var(--primary-color) 1px solid;
 }
 
 input[type="submit"] {
   background-color: var(--primary-color);
+  color: var(--text-color);
+  font-size: 1.2rem;
 }
-.flex {
-  display: flex;
+input[type="submit"]:hover {
+  background: #c47e16;
 }
 
-.show {
+/* input[type="checkbox"] {
+  background-color: #000;
+} */
+
+/* .row {
+  margin: 0 1rem 0 0;
+} */
+
+table {
+  color: var(--text-color);
   cursor: pointer;
+  border-radius: 8px;
+  border-collapse: collapse;
 }
 
-.set {
-  margin: 0.8em 14em;
-  width: 60%;
+table thead {
+  color: var(--primary-color);
 }
 
-.block > p {
-  margin: 0.6em 0 0 0.8em;
-  word-break: break-all;
-  flex-basis: 20.333%;
-  background: rgb(66, 84, 88);
+tbody tr {
+  /* padding: 10px 20px; */
+  /* border-radius: 10px; */
+  border-top: 1px solid var(--text-color);
+  border-bottom: 1px solid var(--text-color);
+}
+td {
+  padding: 5px 20px;
+  /* border: 1px solid var(--text-light); */
   text-align: center;
-  padding: 0.3em;
+  border-top: 1px solid var(--text-color);
+  border-bottom: 1px solid var(--text-color);
 }
+table td:hover {
+  background: var(--text-light);
+  color: black;
+}
+
 @media (max-width: 768px) {
-  .show p {
-    font-size: 0.6em;
+  .container {
+    width: 300px;
   }
 
-  .set {
-    margin: auto;
-    width: 60%;
-    padding: 0.2em;
+  .row {
+    margin-left: -2rem;
+  }
+
+  body {
+    overflow-y: scroll;
   }
 }
