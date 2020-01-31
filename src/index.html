@@ -17,6 +17,13 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="shortcut icon"
+      href="./images/icons/icon-72x72.png"
+      type="image/x-icon"
+    />
+    <link rel="manifest" href="./manifest.json" />
+    <meta name="theme-color" content="#ffad32" />
     <title>My Todo App</title>
   </head>
   <body>
@@ -74,5 +81,12 @@
       </div>
     </div>
     <script src="scripts/app.js"></script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("./sw.js");
+        });
+      }
+    </script>
   </body>
 </html>
