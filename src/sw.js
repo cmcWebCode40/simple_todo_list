@@ -28,23 +28,19 @@ self.addEventListener("message", event => {
  */
 self.__precacheManifest = [
   {
-    url: "css/bg.jpg",
-    revision: "9c340977fcafa71a415e2d5463251f9a"
-  },
-  {
     url: "css/style.css",
     revision: "fc6ef4046811f1326277943738eefc93"
   },
-  {
-    url: "img/favicon.png",
-    revision: "a29f8c90ddcca4332139087f7d591468"
-  },
+  // {
+  //   url: "img/favicon.png",
+  //   revision: "a29f8c90ddcca4332139087f7d591468"
+  // },
   {
     url: "index.html",
     revision: "2f44fa563cbc6e8534c490f979c0ee2a"
   },
   {
-    url: "js/app.js",
+    url: "scripts/app.js",
     revision: "30d08aae06347ac9f45c7ff2e1806ac1"
   }
 ].concat(self.__precacheManifest || []);
