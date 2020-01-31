@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <!-- <link
+    <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    /> -->
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
@@ -22,15 +22,17 @@
   <body>
     <div class="container ">
       <h1>
+        <i class="fa fa-bookmark  "></i>
         My
         <span>
           TodoList
         </span>
       </h1>
+      <div class="target"></div>
       <div class=" wrapper">
         <form class="form" id="form">
           <div class="form-group ">
-            <i class="fa fa-tasks "></i>
+            <i class="fa fa-tasks  "></i>
             <label for="task">Task</label>
             <input type="text" id="task" placeholder="enter your task..." />
           </div>
@@ -62,6 +64,7 @@
                 <td>Task</td>
                 <td>Date</td>
                 <td>Time</td>
+                <td>Edit</td>
                 <td>Delete</td>
               </tr>
             </thead>

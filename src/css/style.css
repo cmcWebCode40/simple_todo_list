@@ -68,20 +68,20 @@ input:focus {
 
 input[type="submit"] {
   background-color: var(--primary-color);
-  color: var(--text-color);
+  color: #000;
   font-size: 1.2rem;
 }
 input[type="submit"]:hover {
   background: #c47e16;
+  color: #000;
 }
-
-/* input[type="checkbox"] {
-  background-color: #000;
-} */
-
-/* .row {
-  margin: 0 1rem 0 0;
-} */
+i {
+  color: var(--primary-color);
+}
+.set {
+  border-radius: 7px;
+  padding: 15px;
+}
 
 table {
   color: var(--text-color);
@@ -92,29 +92,31 @@ table {
 
 table thead {
   color: var(--primary-color);
+  font-weight: bold;
 }
 
 tbody tr {
-  /* padding: 10px 20px; */
-  /* border-radius: 10px; */
   border-top: 1px solid var(--text-color);
   border-bottom: 1px solid var(--text-color);
 }
+
 td {
   padding: 5px 20px;
-  /* border: 1px solid var(--text-light); */
+
   text-align: center;
   border-top: 1px solid var(--text-color);
   border-bottom: 1px solid var(--text-color);
+  max-width: 95px;
+  word-wrap: break-word;
 }
 table td:hover {
-  background: var(--text-light);
+  background: var(--text-color);
   color: black;
 }
 
 @media (max-width: 768px) {
   .container {
-    width: 300px;
+    width: 400px;
   }
 
   .row {

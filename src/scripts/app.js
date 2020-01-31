@@ -17,13 +17,13 @@ class DISPLAY {
   static displayTodoData(todoApp) {
     const show = document.querySelector("tbody");
     const tr = document.createElement("tr");
-    // div.className = "block flex";
-    tr.innerHTML = `<input type="checkbox"class="check"><td class="line"> ${todoApp.task}</td>
-      <td>${todoApp.date}</td>
+    tr.className = "table-row";
+    tr.innerHTML = `<td> ${todoApp.task}</td>
+      <td class="data">${todoApp.date}</td>
       <td>${todoApp.time}</td>
-      <td class ="delete">X</td>
-      <td class ="edit">edit</td>`;
-    // <i class="fa fa-trash-alt text-danger delete"></i>;
+      <td class ="edit"><i class="fa fa-edit text-success "><i></td>
+      <td class ="delete"> <i class="fa fa-trash-alt text-danger delete"></i></td>`;
+
     show.appendChild(tr);
   }
 
@@ -48,7 +48,7 @@ class DISPLAY {
 
   static deleteTask(target) {
     if (target.classList.contains("delete")) {
-      document.querySelector("tr").remove();
+      document.querySelector(".table-row").remove();
 
       const data = Store.getData();
       data.forEach(index => {
