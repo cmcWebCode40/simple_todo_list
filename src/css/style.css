@@ -12,24 +12,29 @@
   padding: 0;
 }
 
+html {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--bg-color);
   color: #fff;
   font-size: 1.1rem;
   font-family: "Livvic" sans-serif;
-  overflow-y: scroll;
 }
 
 .container {
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 500px;
 }
 
 .wrapper {
-  width: 100%;
+  width: 90%;
+  margin: auto;
 }
 
 h1 {

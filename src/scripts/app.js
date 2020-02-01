@@ -1,10 +1,9 @@
 // Delclaring the c {lass that will be used .....
 
 class TODOAPP {
-  constructor(task, date, time) {
+  constructor(task, date) {
     this.task = task;
     this.date = date;
-    this.time = time;
   }
 }
 
@@ -20,7 +19,6 @@ class DISPLAY {
     tr.className = "table-row";
     tr.innerHTML = `<td> ${todoApp.task}</td>
       <td class="data">${todoApp.date}</td>
-      <td>${todoApp.time}</td>
       <td class ="edit"><i class="fa fa-edit text-success "><i></td>
       <td class ="delete"> <i class="fa fa-trash-alt text-danger delete"></i></td>`;
 
@@ -43,7 +41,6 @@ class DISPLAY {
   static clearInputFields() {
     document.querySelector("#task").value = "";
     document.querySelector("#date").value = "";
-    document.querySelector("#time").value = "";
   }
 
   static deleteTask(target) {
@@ -69,16 +66,13 @@ document.querySelector("tbody").addEventListener("click", e => {
   if (e.target.classList.contains("edit")) {
     const taskField = document.querySelector("#task");
     const dateField = document.querySelector("#date");
-    const timeField = document.querySelector("#time");
 
     const data = Store.getData();
     data.forEach(item => {
       let result = item.task;
       let date = item.date;
-      let time = item.time;
       taskField.value = result;
       dateField.value = date;
-      timeField.value = time;
     });
   }
 });
@@ -109,15 +103,14 @@ const updateTask = e => {
   // Get the target Elements .....
   const taskField = document.querySelector("#task").value;
   const dateField = document.querySelector("#date").value;
-  const timeField = document.querySelector("#time").value;
 
   e.preventDefault();
-  if (taskField === "" || dateField === "" || timeField === "") {
+  if (taskField === "" || dateField === "") {
     DISPLAY.flashMessage("Enter all fields", "bg-danger ");
     DISPLAY.clearInputFields();
     console.log("faild");
   } else {
-    const todoApp = new TODOAPP(taskField, dateField, timeField);
+    const todoApp = new TODOAPP(taskField, dateField);
     DISPLAY.displayTodoData(todoApp);
     DISPLAY.flashMessage("task Added", "bg-success ");
     DISPLAY.clearInputFields();
