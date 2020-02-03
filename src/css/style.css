@@ -12,11 +12,6 @@
   padding: 0;
 }
 
-html {
-  overflow-y: scroll;
-  scroll-behavior: smooth;
-}
-
 body {
   background: var(--bg-color);
   color: #fff;
@@ -25,11 +20,8 @@ body {
 }
 
 .container {
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   width: 500px;
+  margin: auto;
 }
 
 .wrapper {
@@ -107,11 +99,10 @@ tbody tr {
 
 td {
   padding: 5px 20px;
-
   text-align: center;
   border-top: 1px solid var(--text-color);
   border-bottom: 1px solid var(--text-color);
-  max-width: 95px;
+  max-width: 125px;
   word-wrap: break-word;
 }
 table td:hover {
@@ -125,10 +116,6 @@ table td:hover {
   }
 
   .row {
-    margin-left: -2rem;
-  }
-
-  body {
-    overflow-y: scroll;
+    margin: auto;
   }
 }
