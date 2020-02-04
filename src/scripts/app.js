@@ -77,8 +77,7 @@ document.querySelector("tbody").addEventListener("click", e => {
   }
 });
 
-// local Storage....
-
+//* storing data to local storage..
 class Store {
   static addTodoList(todoApp) {
     const data = Store.getData();
@@ -97,10 +96,10 @@ class Store {
   }
 }
 
-// functions for the Event actions .....
+// *functions for the Event actions .....
 
 const updateTask = e => {
-  // Get the target Elements .....
+  //* Get the target Elements .....
   const taskField = document.querySelector("#task").value;
   const dateField = document.querySelector("#date").value;
 
@@ -123,10 +122,10 @@ const removeTask = e => {
   DISPLAY.deleteTask(e.target);
 };
 
-// Events for submit action.....
+//* Events for submit action.....
 document.addEventListener("DOMContentLoaded", DISPLAY.localStorageApp);
 
 document.querySelector("#form").addEventListener("submit", updateTask);
 
-// Events for Delete button.....
+// *Events for Delete button.....
 document.querySelector(".show").addEventListener("click", removeTask);
